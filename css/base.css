@@ -1,0 +1,26 @@
+/* base.css */
+body {
+  font-family: 'Tiny5', sans-serif; /* Use Tiny5 font */
+  background-color: #e0f7e0; /* Lime green background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align container to the top */
+  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+  margin: 0;
+  padding: 20px; /* Add padding to prevent content from touching the edges */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  -webkit-font-smoothing: none; /* Disable anti-aliasing for pixel fonts */
+  font-smooth: never; /* Disable anti-aliasing for pixel fonts */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Add text shadow */
+}
+
+.game-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin-top: 20px; /* Add some space at the top */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sublime Switches</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/toggle.css">
+  <link rel="stylesheet" href="css/buttons.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Sublime Switches</h1>
+    <div class="score-container">
+      <p>Lime Juice: <span id="score">0</span> ml</p>
+    </div>
+    <button id="click-button">
+      <img src="Pixel Art.png" alt="Lime">
+    </button>
+    <div class="columns">
+      <div class="column" id="owned-upgrades">
+        <h2>Your Lime Arsenal</h2>
+        <!-- Owned upgrades will be dynamically added here -->
+      </div>
+      <div class="column" id="shop">
+        <h2>The Lime Market</h2>
+        <!-- Shop upgrades will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+  <!-- Load JavaScript files in the correct order -->
+  <script src="js/upgrades.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

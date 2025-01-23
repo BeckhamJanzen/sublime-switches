@@ -1,0 +1,65 @@
+/* game.css */
+
+/* Score container */
+.score-container {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #006400; /* Dark green */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Add text shadow */
+}
+
+/* Columns layout */
+.columns {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+/* Individual column */
+.column {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 250px; /* Minimum width for columns */
+}
+
+/* Column headers */
+.column h2 {
+  margin-top: 0;
+  color: #333; /* Dark grey */
+  font-family: 'Tiny5', sans-serif; /* Use Tiny5 font */
+  -webkit-font-smoothing: none; /* Disable anti-aliasing for pixel fonts */
+  font-smooth: never; /* Disable anti-aliasing for pixel fonts */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Add text shadow */
+}
+
+/* Upgrade container */
+.upgrade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Remove border from the last upgrade */
+.upgrade:last-child {
+  border-bottom: none;
+}
+
+/* Upgrade description */
+.upgrade div {
+  flex: 1;
+  margin-right: 20px; /* Add spacing between description and toggle */
+  font-family: 'Tiny5', sans-serif; /* Use Tiny5 font */
+  -webkit-font-smoothing: none; /* Disable anti-aliasing for pixel fonts */
+  font-smooth: never; /* Disable anti-aliasing for pixel fonts */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Add text shadow */
+}
+
+/* Toggle switch container */
+.toggle-switch {
+  flex-shrink: 0; /* Prevent the toggle from shrinking */
+}

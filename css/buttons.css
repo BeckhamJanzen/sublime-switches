@@ -1,0 +1,53 @@
+/* buttons.css */
+
+/* Buy button */
+.buy-button {
+  background-color: #32cd32; /* Lime green */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Tiny5', sans-serif; /* Use Tiny5 font */
+  -webkit-font-smoothing: none; /* Disable anti-aliasing for pixel fonts */
+  font-smooth: never; /* Disable anti-aliasing for pixel fonts */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Add text shadow */
+  transition: background-color 0.2s ease;
+}
+
+.buy-button:hover {
+  background-color: #228b22; /* Darker green on hover */
+}
+
+.buy-button:disabled {
+  background-color: #ccc; /* Grey when disabled */
+  cursor: not-allowed;
+}
+
+/* Click button */
+#click-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  gap: 10px; /* Space between icon and text */
+  width: 100%; /* Ensure the button takes up full width */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+#click-button img {
+  width: 100px; /* Adjust this value to fit your PNG */
+  height: 100px; /* Adjust this value to fit your PNG */
+  transition: transform 0.1s ease;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Add drop shadow */
+}
+
+#click-button:active img {
+  transform: scale(0.95); /* Slight shrink effect on click */
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3)); /* Reduce shadow on click */
+}
