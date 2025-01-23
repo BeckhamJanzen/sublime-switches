@@ -1,6 +1,6 @@
 // upgrades.js
 
-// Upgrade data
+// Define the upgrades array in the global scope
 const upgrades = [
   {
     id: "juicer-limes",
@@ -47,6 +47,24 @@ const upgrades = [
     active: false,
     enabled: false,
   },
+  {
+    id: "exponential-expansion",
+    name: "6. Exponential Expansion",
+    description: "Auto-generation is multiplied by the number of digits in your lime juice.",
+    cost: Math.pow(5, 6), // 5^6 = 15625
+    effect: () => {}, // No direct effect, handled in auto-generation logic
+    active: false,
+    enabled: false,
+  },
+  {
+    id: "crank-juicer",
+    name: "7. Crank Juicer",
+    description: "Generates 1 lime juice per second for each time a toggle is pressed.",
+    cost: Math.pow(5, 7), // 5^7 = 78125
+    effect: () => {}, // No direct effect, handled in auto-generation logic
+    active: false,
+    enabled: false,
+  },
 ];
 
 // Buy an upgrade
@@ -56,10 +74,10 @@ function buyUpgrade(upgradeId) {
     score -= upgrade.cost;
     upgrade.active = true;
     updateScore();
-    renderShop(); // Re-render the shop after purchasing an upgrade
+    renderShop();
     renderOwnedUpgrades();
   } else {
-    alert("Not enough zest! Keep squeezing!");
+    alert("Not enough lime juice!");
   }
 }
 
@@ -72,11 +90,11 @@ function toggleUpgrade(upgradeId, isChecked) {
   } else {
     upgrade.enabled = false;
     // Reverse the effect (if needed)
-    if (upgrade.id === "sharper-squeezer") {
+    if (upgrade.id === "juicer-limes") {
       juicePerClick -= 1;
-    } else if (upgrade.id === "auto-squeezer") {
+    } else if (upgrade.id === "juicer") {
       autoJuicePerSecond -= 1;
-    } else if (upgrade.id === "lime-farm") {
+    } else if (upgrade.id === "mega-juicer") {
       autoJuicePerSecond -= 5;
     }
   }

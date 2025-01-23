@@ -12,7 +12,7 @@ function renderShop() {
         <div>
           <strong>${upgrade.name}</strong><br>
           <span>${upgrade.description}</span><br>
-          <span>Cost: ${upgrade.cost} ml</span>
+          <span>Cost: ${upgrade.cost.toLocaleString()} ml</span> <!-- Add commas to the cost -->
         </div>
         <button class="buy-button" data-id="${upgrade.id}" ${score >= upgrade.cost ? '' : 'disabled'}>
           Buy!
@@ -69,6 +69,7 @@ function renderOwnedUpgrades() {
     checkbox.addEventListener('change', () => {
       const upgradeId = checkbox.getAttribute('data-id');
       toggleUpgrade(upgradeId, checkbox.checked);
+      handleTogglePress(); // Increment toggle press count
     });
   });
 }
@@ -76,6 +77,6 @@ function renderOwnedUpgrades() {
 // Update score display
 function updateScore() {
   const scoreElement = document.getElementById('score');
-  scoreElement.textContent = score;
+  scoreElement.textContent = score.toLocaleString(); // Add commas to the score
   updateBuyButtons(); // Update buy button states without re-rendering the entire shop
 }
